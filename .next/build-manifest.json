@@ -1,0 +1,44 @@
+{
+  "devFiles": [
+    "static/runtime/react-refresh.js",
+    "static/development/dll/dll_f9de5cbc314a1e41f91e.js",
+    "static/development/dll/dll_f9de5cbc314a1e41f91e.js.map"
+  ],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js"
+  ],
+  "pages": {
+    "/_app": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/_polyfills": [
+      "static/runtime/polyfills.js"
+    ],
+    "/familyIncome": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/healthCondition": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/lifeInsurance": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/rentOrOwn": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/savings": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ]
+  }
+}

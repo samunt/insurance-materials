@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+# firebase credentials
+#./firebaseServiceAccount.json
+
+#*.service.json
+
+#**/firebaseService

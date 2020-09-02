@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+@media only screen and (max-device-width: 530px) {
+    .navbar-heading {
+        font-size: 150% !important;
+      }
+}
+.formHeader {
+    text-align: center;
+    padding: 10px;
+    font-family: Lato, sans-serif;
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+    font-family: Lato, sans-serif;
+}
+
+.progress {
+    height: 0.75rem !important;
+}
+
+.h5 {
+    text-align: center;
+}
+.dobCSS {
+    border-radius: 5px !important;
+    border: 1px solid #007BFF !important;
+    width: 100% !important;
+    height: 3em !important;
+    font-size: 1.2em !important;
+    text-align: center !important;
+}
+
+.react-datepicker-wrapper {
+    display: flex !important;
+}
+
+.cursor-pointer{
+    cursor: pointer
+}
+.navbar-custom{
+    flex-grow: 1,;
+    text-align:"center";
+    font-family:'sans-serif';
+}
+.MuiToolbar-root.MuiToolbar-regular.MuiPickersToolbar-toolbar.MuiPickersDatePickerRoot-toolbar.MuiToolbar-gutters {
+    background-color: #33b5e5;
+}
+.MuiButtonBase-root.MuiIconButton-root.MuiPickersDay-day.MuiPickersDay-current.MuiPickersDay-daySelected{
+    background-color: #33b5e5;
+}
+.active_button{
+    background-color:#33b5e5 !important;
+    color:white !important
+}
+

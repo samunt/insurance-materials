@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7e41d6a8-8298-4ef1-9ff7-c2bcd9b8f5e1" name="Default Changelist" comment="" />
+    <ignored path="$USER_HOME$/Desktop/react-todo-reducer-localstorage-master/node_modules/wait-for-expect/lib/index.d.js/" />
+    <ignored path="$USER_HOME$/Desktop/react-todo-reducer-localstorage-master/node_modules/wait-for-expect/lib/toBeInRangeMatcher.d.js/" />
+    <ignored path="$USER_HOME$/Desktop/react-todo-reducer-localstorage-master/node_modules/wait-for-expect/lib/waitForExpect.spec.d.js/" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mortgageCombined</find>
+      <find>expenseMortgageAndRent</find>
+      <find>form.</find>
+      <find>total</find>
+      <find>router</find>
+      <find>icon</find>
+      <find>react-bootstrap-icons</find>
+      <find>handleShowTitle</find>
+      <find>handleclose</find>
+      <find>Choose</find>
+      <find>when</find>
+      <find>setshowaskaboutchildren</find>
+      <find>showHowOld</find>
+      <find>why</find>
+      <find>setShowHealthCondition</find>
+      <find>setShowHealthPrice</find>
+      <find>next</find>
+      <find>nonretir</find>
+      <find>question</find>
+      <find>setshow</find>
+      <find>cars</find>
+      <find>childcare</find>
+      <find>setShowExpenseDiscretionary</find>
+      <find>setShowExpenseOther</find>
+      <find>&lt;div&gt;</find>
+      <find>form</find>
+      <find>h5</find>
+      <find>&lt;h2</find>
+      <find>h2</find>
+      <find>jsonRespo</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="12" />
+    <option name="y" value="23" />
+    <option name="width" value="1153" />
+    <option name="height" value="777" />
+  </component>
+  <component name="ProjectId" id="1grmHoGOYapij93YbVFB4il5svU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/firebaseService" />
+      <recent name="$PROJECT_DIR$/pages/api/quoteEngine" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/hooks" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e41d6a8-8298-4ef1-9ff7-c2bcd9b8f5e1" name="Default Changelist" comment="" />
+      <created>1595450231529</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595450231529</updated>
+      <workItem from="1595450232905" duration="16885000" />
+      <workItem from="1596042210599" duration="109000" />
+      <workItem from="1596042935114" duration="731000" />
+      <workItem from="1596049029317" duration="94559000" />
+      <workItem from="1599053835664" duration="13000" />
+    </task>
+    <task id="LOCAL-00001" summary="- UI fixes for the insurdinary app.&#10;- fixed issues related to state management.">
+      <created>1598881434481</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598881434481</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="151802000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="12" y="23" width="1153" height="777" extended-state="0" />
+    <layout>
+      <window_info id="npm" side_tool="true" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329927" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$USER_HOME$/Desktop/react-todo-reducer-localstorage-master/node_modules/wait-for-expect/lib/index.d.js" />
+        <option value="$USER_HOME$/Desktop/react-todo-reducer-localstorage-master/node_modules/wait-for-expect/lib/toBeInRangeMatcher.d.js" />
+        <option value="$USER_HOME$/Desktop/react-todo-reducer-localstorage-master/node_modules/wait-for-expect/lib/waitForExpect.spec.d.js" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- UI fixes for the insurdinary app.&#10;- fixed issues related to state management." />
+    <option name="LAST_COMMIT_MESSAGE" value="- UI fixes for the insurdinary app.&#10;- fixed issues related to state management." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="282" y="73" width="768" height="558" key="CommitChangelistDialog2" timestamp="1598881409206">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="282" y="73" width="768" height="558" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1598881409206" />
+    <state x="129" y="55" key="DiffContextDialog" timestamp="1598881502363">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="55" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1598881502363" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1598881766653">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1598881766653" />
+    <state x="567" y="146" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1598881179818">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="567" y="146" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1366.728@0.0.1366.728" timestamp="1598881179818" />
+  </component>
+</project>
