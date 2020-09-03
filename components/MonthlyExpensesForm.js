@@ -23,6 +23,7 @@ export default function MonthlyExpensesForm() {
     // progress
     const now = 95;
     
+    //style classes
     const useStyles = makeStyles((theme) => ({
 		root: {
 		  display: 'flex',
@@ -93,6 +94,7 @@ export default function MonthlyExpensesForm() {
     
     useEffect(() => {
         setExpenseTotal(expenseMortgageAndRent + expenseHousingBillsUtilities + expenseGroceriesRestaurantsAlcohol + expensePhoneInternetCable + expenseShoppingFitnessGrooming + expenseCarsTaxisPublicTransit + expenseChildcareEducation + expenseDiscretionaryTravelRecGifts + expenseOther);
+        //enable disable next button
         if(expenseTotal > 0){
             setIsNext(false)
         }else{
@@ -107,7 +109,8 @@ export default function MonthlyExpensesForm() {
         expenseGroceriesRestaurantsAlcohol,
         expenseHousingBillsUtilities,
         expenseMortgageAndRent]);
-
+    
+    //dispatch data to localstorage/redux
     useEffect(() => {
         dispatch({ type: "EXPENSE_MORTGAGE_RENT", expenseMortgageAndRent: expenseMortgageAndRent });
     }, [expenseMortgageAndRent]);
@@ -147,6 +150,7 @@ export default function MonthlyExpensesForm() {
     useEffect(() => {
         dispatch({ type: "EXPENSE_TOTAL", expenseTotal: expenseTotal });
     }, [expenseTotal]);
+    
     return (
         <React.Fragment>
 		<Grid item xs={12} style={{margin:'10px auto'}}>

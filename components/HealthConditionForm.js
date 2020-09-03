@@ -15,6 +15,7 @@ export default function HealthForm() {
     const [showHealthPrice, setShowHealthPrice] = useState(false);
     const handleCloseHealthPrice = () => setShowHealthPrice(false);
 
+    //get data from localstroage/redux and set State when component mounted
     useEffect(() => {
         if(form && healthCondition !== form.healthCondition){
 			setHealthCondition(form.healthCondition);
@@ -22,6 +23,7 @@ export default function HealthForm() {
 	}, []);
 
 	useEffect(() => {
+        //highlight Yes/No button accourding to selected state and dispatch data on localstorage/redux
 		if(healthCondition === true){
 			dispatch({ type: "HEALTH_CONDITION", healthCondition: true });
 			document.getElementById('healthCondition-no').classList.remove('active_button');

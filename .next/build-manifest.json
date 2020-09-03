@@ -20,23 +20,11 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
-    "/familyIncome": [
+    "/children": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/healthCondition": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/lifeInsurance": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/rentOrOwn": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/savings": [
+    "/quotes": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

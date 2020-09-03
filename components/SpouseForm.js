@@ -16,6 +16,7 @@ function SpouseForm() {
 	const form = useContext(FormContext);
 	const now = 10;
 	
+	//get data from localstorage/redux and set to states
 	useEffect(() => {
         if(hasSpouse !== form.spouse){
 			updateHasSpouse(form.spouse);
@@ -27,6 +28,7 @@ function SpouseForm() {
 	}, []);
 	
     useEffect(() => {
+		//enable disable next button
         if(hasSpouse !== false){
 			if(spouseAge && spouseAge !== ''){
             	setIsNext(false);
@@ -36,6 +38,7 @@ function SpouseForm() {
         }else{
             setIsNext(true);
 		}
+		//hightlight yes/no button
 		if(hasSpouse === true){
 			document.getElementById('spouse-no').classList.remove('active_button');
 			document.getElementById('spouse-yes').classList.add('active_button');
@@ -50,16 +53,12 @@ function SpouseForm() {
 	const handleCloseTitle = () => setShowTitle(false);
 	const [showWhyWeAsk, setShowWhyWeAsk] = useState(false);
 	const handleCloseWhyWeAsk = () => setShowWhyWeAsk(false);
-
-
-	// useEffect(() => {
-	// 	dispatch({ type: "ADD_SPOUSE", spouse: hasSpouse });
-	// 	}, [hasSpouse]);
 	
 	const handleSubmit = (e) =>{
 		e.preventDefault();
 		router.push("/children");
 	}
+	//set has spouse true and dispatch data to localstorage/redux and highlight yes button on click on Yes button
 	function handleClick(){
 		updateHasSpouse(true);
 		dispatch({ type: "ADD_SPOUSE", spouse: true });
@@ -112,6 +111,7 @@ function SpouseForm() {
 							No
 						</Button>
 					</Grid>
+					{/* this section is only shows when hasSpuse is not true */}
 					{hasSpouse !== true ? <Grid container item justify="center" xs={12} sm={12} spacing={2}>
 						<p className="header font-weight-bold">Why do we ask about your spouse?&nbsp;&nbsp;
 							<QuestionCircle
@@ -122,6 +122,7 @@ function SpouseForm() {
 						</p>
 					</Grid>
 					:
+					// this section is only shown when hasSpouse is true
 					<Grid container item justify="center" xs={12} sm={12} spacing={2}>
 						<Grid item xs={12} sm={12} >
 							<h4 className="header">

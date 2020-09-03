@@ -14,7 +14,9 @@ export default function GenderForm() {
     const handleCloseSex = () => setShowSex(false);
     const form = useContext(FormContext);
 
-    const now = 40;
+	const now = 40;
+
+    //get data from localstroage/redux and set State when component mounted
 	useEffect(() => {
         if(form && sex !== form.sex){
 			setSex(form.sex);
@@ -22,7 +24,7 @@ export default function GenderForm() {
 	}, []);
 
 	useEffect(() => {
-		dispatch({ type: "SEX", sex: sex });
+		//highlight Male/Female button accourding to selected state
 		if(sex==="Female"){
 			document.getElementById('male-yes').classList.remove('active_button');
 			document.getElementById('female-yes').classList.add('active_button');
@@ -31,6 +33,8 @@ export default function GenderForm() {
 			document.getElementById('female-yes').classList.remove('active_button');
 			document.getElementById('male-yes').classList.add('active_button');
 		}
+		//dispatch data to localstroage/redux on change
+		dispatch({ type: "SEX", sex: sex });
 	}, [sex]);
 
     return (

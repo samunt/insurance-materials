@@ -41,7 +41,8 @@ export default function DebtForm() {
 	}));
 	
 	const classes = useStyles();
-	
+		
+	//get data from localstroage/redux and set State when component mounted
 	useEffect(() => {
         if(debt !== form.debt){
             setDebt(form.debt);
@@ -65,6 +66,7 @@ export default function DebtForm() {
     }, []);
     
 	useEffect(() => {
+		//highlight Yes/No button accourding to selected state
 		if(debt === true){
 			document.getElementById('debt-no').classList.remove('active_button');
 			document.getElementById('debt-yes').classList.add('active_button');
@@ -73,6 +75,7 @@ export default function DebtForm() {
 			document.getElementById('debt-no').classList.add('active_button');
 		}
 		
+		//enable disable next button
 		if(debt === true && (debtCreditCard > 0 || debtCreditCard === 0) && (debtStudentLoan > 0 || debtStudentLoan === 0)
 			&& (debtHomeEquity > 0 || debtHomeEquity === 0) && (debtLineOfCredit > 0 || debtLineOfCredit === 0) && (debtOther > 0 || debtOther === 0)){
 			setIsNext(false);
@@ -80,16 +83,12 @@ export default function DebtForm() {
 			setIsNext(true)
 		}
 
+		//dispatch data on localstroage/redux on change
         dispatch({ type: "HAS_DEBT", debt: debt });
-
 		dispatch({ type: "DEBT_CREDIT_CARD", debtCreditCard: debtCreditCard });
-
 		dispatch({ type: "DEBT_STUDENT_LOAN", debtStudentLoan: debtStudentLoan });
-
 		dispatch({ type: "DEBT_HOME_EQUITY", debtHomeEquity: debtHomeEquity });
-
 		dispatch({ type: "DEBT_LINE_OF_CREDIT", debtLineOfCredit: debtLineOfCredit });
-
 		dispatch({ type: "DEBT_OTHER", debtOther: debtOther });
 
 	}, [debt, debtCreditCard, debtStudentLoan, debtHomeEquity, debtLineOfCredit, debtOther]);
@@ -152,6 +151,7 @@ export default function DebtForm() {
 					</Button>
 				</Grid>
 			</Grid>
+			{/* this section is only shown when debt is true */}
 			{debt && <Grid container item xs={12} sm={12} justify="center" spacing={2}>
 				<Grid container item justify="center" xs={12} sm={12} spacing={2} className="mt-4">
 					<p className="header font-weight-bold">Estimate your debts for each category</p>

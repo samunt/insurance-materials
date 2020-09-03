@@ -39,6 +39,8 @@ export default function rentOrOwnForm() {
 	}));
 	
 	const classes = useStyles();
+
+	//get data from localstroage/redux and set State when component mounted
 	useEffect(() => {
         if(lifeInsurance !== form.lifeInsurance){
             setLifeInsurance(form.lifeInsurance ? form.lifeInsurance : '');
@@ -52,25 +54,20 @@ export default function rentOrOwnForm() {
     }, []);
     
 	useEffect(() => {
-		if(lifeInsurance === true){
+		//highlight Yes/No button accourding to selected state
+		if(form.lifeInsurance === true){
 			document.getElementById('insurance-no').classList.remove('active_button');
 			document.getElementById('insurance-yes').classList.add('active_button');
-		}else if(lifeInsurance === false){
+		}else if(form.lifeInsurance === false){
 			document.getElementById('insurance-yes').classList.remove('active_button');
 			document.getElementById('insurance-no').classList.add('active_button');
 		}
-		
-		if(lifeInsurance === true && (lifeInsuranceEmployer > 0 || lifeInsuranceEmployer === 0) && (lifeInsurancePersonal > 0 || lifeInsurancePersonal === 0)){
+		//enable disable next button
+		if(form.lifeInsurance === true && (lifeInsuranceEmployer > 0 || lifeInsuranceEmployer === 0) && (lifeInsurancePersonal > 0 || lifeInsurancePersonal === 0)){
 			setIsNext(false);
 		}else{
 			setIsNext(true)
 		}
-
-		dispatch({ type: "LIFE_INSURANCE", lifeInsurance: lifeInsurance });
-
-		dispatch({ type: "LIFE_INSURANCE_EMPLOYER", lifeInsuranceEmployer: lifeInsuranceEmployer });
-
-		dispatch({ type: "LIFE_INSURANCE_PERSONAL", lifeInsurancePersonal: lifeInsurancePersonal });
 
 	}, [lifeInsurance, lifeInsuranceEmployer, lifeInsurancePersonal]);
 
@@ -96,6 +93,7 @@ export default function rentOrOwnForm() {
 						className="align-button"
 						onClick={() => {
                             setLifeInsurance(true);
+							dispatch({ type: "LIFE_INSURANCE", lifeInsurance: true });
 						}}
 						id="insurance-yes"
 						style={{ width: "100%" }}
@@ -113,6 +111,7 @@ export default function rentOrOwnForm() {
 							setLifeInsurance(false);
 							setLifeInsuranceEmployer();
 							setLifeInsurancePersonal();
+							dispatch({ type: "LIFE_INSURANCE", lifeInsurance: false });
 							dispatch({ type: "LIFE_INSURANCE_EMPLOYER", lifeInsuranceEmployer: 0 });
 							dispatch({ type: "LIFE_INSURANCE_PERSONAL", lifeInsurancePersonal: 0 });
                             router.push('/savings');
@@ -125,6 +124,7 @@ export default function rentOrOwnForm() {
 					</Button>
 				</Grid>
 			</Grid>
+			{/* this section is only shown when lifeInsurance is true */}
 			{lifeInsurance && <Grid container item xs={12} sm={12} justify="center" spacing={2}>
 				<Grid container item justify="center" xs={12} sm={12} spacing={2} className="mt-4">
 					<p className="header font-weight-bold">Employer Life Insurance</p>
@@ -137,7 +137,8 @@ export default function rentOrOwnForm() {
 							value={lifeInsuranceEmployer}
 							type="number"
 							onChange={(e) => {
-                                setLifeInsuranceEmployer(e.target.value !== '' ? parseInt(e.target.value) : '')
+								setLifeInsuranceEmployer(e.target.value !== '' ? parseInt(e.target.value) : '');
+								dispatch({ type: "LIFE_INSURANCE_EMPLOYER", lifeInsuranceEmployer: e.target.value !== '' ? parseInt(e.target.value) : '' });
                             }}
 							startAdornment={<InputAdornment position="start">$</InputAdornment>}
 						/>
@@ -153,7 +154,10 @@ export default function rentOrOwnForm() {
 							id="standard-adornment-amount"
 							value={lifeInsurancePersonal}
 							type="number"
-							onChange={(e) => {setLifeInsurancePersonal(e.target.value !== '' ? parseInt(e.target.value) : '')}}
+							onChange={(e) => {
+								setLifeInsurancePersonal(e.target.value !== '' ? parseInt(e.target.value) : '');
+								dispatch({ type: "LIFE_INSURANCE_PERSONAL", lifeInsurancePersonal: e.target.value !== '' ? parseInt(e.target.value) : '' });
+							}}
 							startAdornment={<InputAdornment position="start">$</InputAdornment>}
 						/>
 					</FormControl>

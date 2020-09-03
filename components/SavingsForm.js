@@ -29,6 +29,7 @@ export default function SavingsForm() {
     // progress bar
     const now = 85;
 
+    //classes style
     const useStyles = makeStyles((theme) => ({
 		root: {
 		  display: 'flex',
@@ -47,6 +48,7 @@ export default function SavingsForm() {
 	
     const classes = useStyles();
     
+    //get data from localstorage/redux and set to states
     useEffect(() => {
         if(hasSavings !== form.hasSavings){
             setHasSavings(form.hasSavings ? form.hasSavings : false);
@@ -60,6 +62,7 @@ export default function SavingsForm() {
     }, []);
     
 	useEffect(() => {
+        //hightlight yes no button
 		if(hasSavings === true){
 			document.getElementById('saving-no').classList.remove('active_button');
 			document.getElementById('saving-yes').classList.add('active_button');
@@ -67,17 +70,15 @@ export default function SavingsForm() {
 			document.getElementById('saving-yes').classList.remove('active_button');
 			document.getElementById('saving-no').classList.add('active_button');
 		}
-		
+		//enable disable next button
 		if(hasSavings === true && (hasRetirementSavings > 0 || hasRetirementSavings === 0) && (hasNonRetirementSavings > 0 || hasNonRetirementSavings === 0)){
 			setIsNext(false);
 		}else{
 			setIsNext(true)
 		}
-
+        //dispatch data to localstorage/ redeux on change
         dispatch({ type: "HAS_SAVINGS", hasSavings: hasSavings });
-
 		dispatch({ type: "HAS_RETIREMENT_SAVINGS", hasRetirementSavings: hasRetirementSavings });
-
 		dispatch({ type: "HAS_NON_RETIREMENT_SAVINGS", hasNonRetirementSavings: hasNonRetirementSavings });
 
     }, [hasSavings, hasRetirementSavings, hasNonRetirementSavings]);
@@ -133,6 +134,7 @@ export default function SavingsForm() {
 					</Button>
 				</Grid>
 			</Grid>
+            {/* this section is only shows when hasSavings is true */}
 			{hasSavings && <Grid container item xs={12} sm={12} justify="center" spacing={2}>
 				<Grid container item justify="center" xs={12} sm={12} spacing={2} className="mt-4">
                     <p className="header font-weight-bold">Retirement savings&nbsp;&nbsp;

@@ -25,20 +25,18 @@ export default function ChildrenForm() {
 
 	const now = 15;
 
+	//get data from localstroage/redux and set State when component mounted
 	useEffect(() => {
-
         if(hasChildren !== form.hasChildren){
 			updateHasChildren(form.hasChildren);
-			document.getElementById('child-yes').classList.add('active_button');
         }
-
-        if(numberOfChildren !== form.childrenAgeArray){
-            updateNumberOfChildren(form.childrenAgeArray);
+        if(form.numberOfChildren && numberOfChildren !== form.numberOfChildren){
+            updateNumberOfChildren(form.numberOfChildren);
         }
-
 	}, []);
 	
     useEffect(() => {
+		//enable disable next button
         if(hasChildren !== false){
 			if(numberOfChildren && numberOfChildren !== { id: 1, age: '' }){
 				setIsNext(true)
@@ -53,10 +51,16 @@ export default function ChildrenForm() {
         }else{
             setIsNext(true);
 		}
-		dispatch({ type: "NUMBER_OF_CHILDREN", numberOfChildren: numberOfChildren.length });
-		dispatch({ type: "CHILDREN_AGE_ARRAY", childrenAgeArray: numberOfChildren });
+		//highlight yes/no button
+		if(hasChildren === true){
+			document.getElementById('child-yes').classList.add('active_button');
+		}else if(hasChildren === false){
+			document.getElementById('child-no').classList.add('active_button');
+		}
+		//dispatch data to localstroage/redux on change
+		dispatch({ type: "NUMBER_OF_CHILDREN", numberOfChildren: numberOfChildren });
 	}, [hasChildren, numberOfChildren]);
-
+	//style classes
 	const useStyles = makeStyles((theme) => ({
 		root: {
 		  display: 'flex',
@@ -74,15 +78,6 @@ export default function ChildrenForm() {
 	
 	const dispatch = useContext(DispatchContext);
 	const router = useRouter();
-
-	// useEffect(() => {
-	// 	dispatch({ type: "CHILDREN_AGE_ARRAY", childrenAgeArray: numberOfChildren });
-	// 	dispatch({ type: "NUMBER_OF_CHILDREN", numberOfChildren: numberOfChildren.length - 1 });
-	// }, [numberOfChildren]);
-
-	// useEffect(() => {
-	// 	dispatch({ type: "HAS_CHILDREN", hasChildren: false });
-	// }, [hasChildren]);
 
 	// Update numberOfChildren state
 	function updateData(e, id) {
@@ -113,7 +108,6 @@ export default function ChildrenForm() {
 		const itemIndex = numberOfChildren.findIndex(
 			item => item.id === Number(id)
 		);
-		console.log('ITEM INDEX', itemIndex);
 		// Make a copy of the state
 		const children = [...numberOfChildren];
 		// remove the child from the array
@@ -125,7 +119,9 @@ export default function ChildrenForm() {
 		e.preventDefault();
 		router.push('/secondaryEducation')
 	}
+	//if person have childrens highlight yes button and dispatch data to localstorage/redux and update state
 	async function handleClick(){
+		document.getElementById('child-no').classList.remove('active_button');
 		document.getElementById('child-yes').classList.add('active_button')
 		await updateHasChildren(true);
 		dispatch({ type: "HAS_CHILDREN", hasChildren: true });
@@ -162,8 +158,14 @@ export default function ChildrenForm() {
 					<Grid item xs={12} sm={6} >
 						<Button
 							className="align-button"
+							id="child-no"
 							onClick={() => {
 								updateHasChildren(false);
+								updateNumberOfChildren([{id: 1, age: ''}])
+								dispatch({ type: "HAS_CHILDREN", hasChildren: false });
+								dispatch({ type: "NUMBER_OF_CHILDREN", numberOfChildren: [{id: 1, age: ''}] });
+								document.getElementById('child-yes').classList.remove('active_button');
+								document.getElementById('child-no').classList.add('active_button');
 								router.push('/dob')
 							}}
 							style={{ width: "100%" }}
@@ -174,6 +176,7 @@ export default function ChildrenForm() {
 						</Button>
 					</Grid>
 				</Grid>
+				{/* this section is only shown when hasChildren is true */}
 				{hasChildren === true && <>
 				<Grid container item justify="center" xs={12} sm={12} spacing={2}>
 					<Grid item xs={12} sm={12} >

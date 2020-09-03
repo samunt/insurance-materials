@@ -21,6 +21,7 @@ export default function rentOrOwnForm() {
 	const [showInTheMarket, setShowInTheMarket] = useState(false);
 	const handleCloseInTheMarket = () => setShowInTheMarket(false);
 
+	//classes style
 	const useStyles = makeStyles((theme) => ({
 		root: {
 		  display: 'flex',
@@ -41,6 +42,7 @@ export default function rentOrOwnForm() {
 
 	const now = 65;
 
+	//get data from localstorage/redux and set to state
 	useEffect(() => {
         if(rentOrOwn !== form.rentOrOwn){
             setRentOrOwn(form.rentOrOwn ? form.rentOrOwn : '');
@@ -57,6 +59,7 @@ export default function rentOrOwnForm() {
     }, []);
     
 	useEffect(() => {
+		//highlight yes/no button and dispatch data to localstorage/redux also set state
 		if(rentOrOwn === "Rent"){
 			dispatch({ type: "RENT_OR_OWN", rentOrOwn: "Rent" });
 			document.getElementById(`Own-yes`).classList.remove('active_button')
@@ -72,6 +75,7 @@ export default function rentOrOwnForm() {
 			setMonthlyRent('');
 			dispatch({ type: "MONTHLY_RENT", monthlyRent: 0 });
 		}
+		//enable disable next button
 		if(rentOrOwn === "Rent" && (monthlyRent > 0 || monthlyRent === 0)){
 			setIsNext(false);
 		}
@@ -80,11 +84,9 @@ export default function rentOrOwnForm() {
 		}else{
 			setIsNext(true)
 		}
-
+		//dispatch data to localstorage/redux
 		dispatch({ type: "MONTHLY_RENT", monthlyRent: monthlyRent });
-
 		dispatch({ type: "MORTGAGE_CURRENT_BALANCE", mortgageCurrentBalance: currentBalance });
-
 		dispatch({ type: "MORTGAGE_MONTHLY_PAYMENT", mortgageMonthlyPayment: monthlyPayment });
 
 	}, [rentOrOwn, monthlyRent, currentBalance, monthlyPayment]);
@@ -132,6 +134,7 @@ export default function rentOrOwnForm() {
 					</Button>
 				</Grid>
 			</Grid>
+			{/* this section is only shown when rentOrOwn has value "Rent" */}
 			{rentOrOwn === "Rent" && <Grid container item xs={12} sm={12} justify="center" spacing={2}>
 				<Grid container item justify="center" xs={12} sm={12} spacing={2} className="mt-4">
 					<h5 className="header">What is your monthly rent?</h5>
@@ -165,6 +168,8 @@ export default function rentOrOwnForm() {
 				</Grid>
 			</Grid>
 			}
+			
+			{/* this section is only shown when rentOrOwn has value "Own" */}
 			{rentOrOwn === "Own" && <Grid container item xs={12} sm={12} justify="center" spacing={2}>
 				<Grid container item justify="center" xs={12} sm={12} spacing={2} className="mt-4">
 					<h5 className="header">What is your mortgage amount?</h5>

@@ -37,20 +37,20 @@ export default function FamilyIncomeForm() {
       }));
     
     const classes = useStyles();
-
+    //get data from localstroage/redux and set State when component mounted
     useEffect(() => {
-
         if(yourIncome !== form.yourIncome){
             setYourIncome(form.yourIncome ? form.yourIncome : 0);
         }
-
-        if(spouseIncome !== form.spouseIncome){
+        if(form.spouse && spouseIncome !== form.spouseIncome){
             setSpouseIncome(form.spouseIncome);
+        }else{
+            dispatch({ type: "SPOUSE_INCOME", spouseIncome: 0 });
         }
-
     }, []);
     
     useEffect(() => {
+        //enable disable next button
         if(form.spouse === true && spouseIncome >= 0 && yourIncome >= 0){
             setIsNext(false);
         }else if(form.spouse === false && yourIncome >=0){
@@ -58,6 +58,7 @@ export default function FamilyIncomeForm() {
         }else{
             setIsNext(true);
         }
+        //dispatch data to localstroage/redux on change
         dispatch({ type: "YOUR_INCOME", yourIncome: yourIncome });
         dispatch({ type: "SPOUSE_INCOME", spouseIncome: spouseIncome });
     }, [yourIncome, spouseIncome]);
@@ -92,6 +93,7 @@ export default function FamilyIncomeForm() {
                     </FormControl>
                 </Grid>
 			</Grid>
+            {/* this section is only shown when spouse is true */}
             {form.spouse && <Grid container item xs={12} sm={12} justify="center" spacing={2}>
                 <Grid item xs={12} sm={8}>
                     <FormControl fullWidth className={classes.margin}>

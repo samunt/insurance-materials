@@ -20,19 +20,16 @@ export default function PersonalInformationForm() {
     dispatch({ type: "ID", id: uuid() });
 
     useEffect(() => {
-
+        //get data from localstorage/redux and set to state
         if(nameFirst !== form.nameFirst){
             setNameFirst(form.nameFirst ? form.nameFirst : '');
         }
-
         if(nameLast !== form.nameLast){
             setNameLast(form.nameLast ? form.nameLast : '');
         }
-
         if(nameEmail !== form.nameEmail){
             setNameEmail(form.nameEmail ? form.nameEmail : '');
         }
-
         if(namePhone !== form.namePhone){
             setNamePhone(form.namePhone ? form.namePhone : '');
         }
@@ -40,6 +37,7 @@ export default function PersonalInformationForm() {
     }, []);
     
     useEffect(() => {
+        //enable disable next button
         if(nameFirst !== '' && nameLast !== '' && nameEmail !== '' && namePhone !== ''){
             setIsNext(false);
         }else{
@@ -47,6 +45,7 @@ export default function PersonalInformationForm() {
         }
     }, [nameFirst, nameLast, nameEmail, namePhone]);
 
+    //classes style
     const useStyles = makeStyles(theme => ({
         container: {
           display: 'flex',
@@ -72,8 +71,8 @@ export default function PersonalInformationForm() {
             color: theme.palette.text.secondary,
           },
       }));
-
     const classes = useStyles();
+
     const handleSubmit = (e) => {
         e.preventDefault();
         router.push('/spouseForm')
