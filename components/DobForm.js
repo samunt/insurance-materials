@@ -24,6 +24,7 @@ export default function DobForm() {
     const [dateAlert, setDateAlert] = useState('');
 	const form = useContext(FormContext);
 
+    //get data from localstroage/redux and set State when component mounted
     useEffect(() => {
         if(startDate !== form.dob && form.dob !== null){
 			setStartDate(form.dob);
@@ -32,8 +33,8 @@ export default function DobForm() {
 	}, []);
 	
     useEffect(() => {
+        //checking the age between 18 to 100 and shown alerts and enable/disable button if age is in range
         let today = new Date();
-        let start = new Date(startDate);
         if(startDate !== null){
             var difference = (Date.parse(today) - Date.parse(startDate)) / (86400000 * 365);
             if (difference >= 18 && difference < 100) {
@@ -51,6 +52,7 @@ export default function DobForm() {
         }else{
             setIsNext(true);
         }
+        //dispatch data to localstroage/redux on change
         dispatch({ type: "DOB", dob: startDate });
     }, [startDate]);
     
@@ -86,6 +88,7 @@ export default function DobForm() {
                             />
                         </Grid>
                     </MuiPickersUtilsProvider>
+                    {/* date alert */}
                     {dateAlert && <p className="text-danger font-weight-bold">{dateAlert}</p>}
                 </Grid>
                 <Grid container item justify="center" xs={12} sm={12} spacing={2} className="mt-4">

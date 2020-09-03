@@ -2,8 +2,7 @@ import React, {useContext, useEffect, useState} from "react";
 import { useRouter } from "next/router";
 import { DispatchContext } from "../contexts/FormContext";
 import {QuestionCircle} from "react-bootstrap-icons";
-import Card from 'react-bootstrap/Card';
-import {Modal, ProgressBar, Button} from "react-bootstrap";
+import {Modal, ProgressBar, Button, Card} from "react-bootstrap";
 import {Grid, Container, CssBaseline, InputAdornment, makeStyles, Input, InputLabel, FormControl} from '@material-ui/core';
 
 
@@ -27,7 +26,7 @@ export default function QuotesPage() {
 			<Grid container item justify="center" xs={12} sm={12} spacing={2}>
 				<h4 className='header'>Here are your quotes!&nbsp;&nbsp;
                     <QuestionCircle
-                        size={30}
+                        size={15}
                         className="cursor-pointer"
                         onClick={() => {setShowQuoteMessage(true)}}
                     />
@@ -47,6 +46,7 @@ export default function QuotesPage() {
                             bg={"white"}
                             text={'dark'}
                             className="mb-4"
+                            style={{ width: '30rem' }}
                         >
                             <Card.Header>{variant}</Card.Header>
                             <Card.Body>
@@ -56,7 +56,7 @@ export default function QuotesPage() {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-            ))};
+            ))}
 			</Grid>
 		{/*quote message*/}
         <Modal show={showQuoteMessage} onHide={handleCloseQuoteMessage}>

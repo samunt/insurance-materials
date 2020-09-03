@@ -15,6 +15,7 @@ export default function TobaccoForm() {
     const [showUsedToSmoke, setShowUsedToSmoke] = useState(false);
     const handleCloseUsedToSmoke = () => setShowUsedToSmoke(false);
 
+	//get data form localstorage/redux and set to state
 	useEffect(() => {
         if(form && tobacco !== form.tobacco){
 			setTobacco(form.tobacco);
@@ -22,6 +23,7 @@ export default function TobaccoForm() {
 	}, []);
 
 	useEffect(() => {
+		//hightlight yes/ no button and dispatch data to localstorage/redux
 		if(tobacco === true){
 			dispatch({ type: "TOBACCO", tobacco: true });
 			document.getElementById('tobacco-no').classList.remove('active_button');

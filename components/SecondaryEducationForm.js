@@ -11,14 +11,9 @@ export default function SecondaryEducationForm() {
 	const form = useContext(FormContext);
     const [showSecondaryEducation, setShowSecondaryEducation] = useState(false);
     const handleCloseSecondaryEducation = () => setShowSecondaryEducation(false);
-
-    // useEffect(() => {
-    //     if(showSecondaryEducation !== form.payForCollege){
-    //         setShowSecondaryEducation(form.payForCollege);
-    //     }
-    // }, []);
     
     useEffect(() => {
+        //highlight yes no button
 		if(form.payForCollege === true){
 			document.getElementById('education-no').classList.remove('active_button');
 			document.getElementById('education-yes').classList.add('active_button');
