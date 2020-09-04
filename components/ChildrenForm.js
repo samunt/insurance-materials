@@ -38,7 +38,7 @@ export default function ChildrenForm() {
     useEffect(() => {
 		//enable disable next button
         if(hasChildren !== false){
-			if(numberOfChildren && numberOfChildren !== { id: 1, age: '' }){
+			if(numberOfChildren && numberOfChildren !== [{ id: 1, age: '' }]){
 				setIsNext(true)
 				numberOfChildren.map((child)=>{
 					if(child.age !== ''){

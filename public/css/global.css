@@ -27,7 +27,7 @@
 }
 .dobCSS {
     border-radius: 5px !important;
-    border: 1px solid #007BFF !important;
+    border: 1px solid #2e3231 !important;
     width: 100% !important;
     height: 3em !important;
     font-size: 1.2em !important;
@@ -47,13 +47,13 @@
     font-family:'sans-serif';
 }
 .MuiToolbar-root.MuiToolbar-regular.MuiPickersToolbar-toolbar.MuiPickersDatePickerRoot-toolbar.MuiToolbar-gutters {
-    background-color: #33b5e5;
+    background-color: #2e3231;
 }
 .MuiButtonBase-root.MuiIconButton-root.MuiPickersDay-day.MuiPickersDay-current.MuiPickersDay-daySelected{
-    background-color: #33b5e5;
+    background-color: #2e3231;
 }
 .active_button{
-    background-color:#33b5e5 !important;
+    background-color:#2e3231 !important;
     color:white !important
 }
 
