@@ -6,6 +6,7 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import { v4 as uuid } from 'uuid';
 import { makeStyles } from '@material-ui/core/styles';
 import {Grid, Container, TextField, CssBaseline} from '@material-ui/core';
+import {Modal} from "react-bootstrap";
 
 export default function PersonalInformationForm() {
     const router = useRouter();
@@ -174,6 +175,16 @@ export default function PersonalInformationForm() {
                         </Grid>
                     </Grid>   
             </Container>
+            {/*quote message*/}
+            <Modal show={showQuoteMessage} onHide={handleCloseQuoteMessage}>
+                <Modal.Title>Our Privacy Commitment</Modal.Title>
+                <Modal.Body><h2>We are committed to providing our customers with strong, reliable, trustworthy and forward-thinking solutions for their most significant financial decisions. This includes protecting the privacy of all personal information in our care. When handling personal information, we abide by the following Corporate Privacy Principles:</h2></Modal.Body>
+                <Modal.Footer>
+                    <Button variant="outline-info" onClick={handleCloseQuoteMessage}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </React.Fragment>
     )
 }
