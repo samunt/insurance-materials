@@ -29,8 +29,6 @@
       <change beforePath="$PROJECT_DIR$/../hooks-grocery-list/src/hooks/useLocalStorageState.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../hooks-grocery-list/src/reducers/todo.reducer.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../insurance-forms" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PersonalInformationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/PersonalInformationForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-context/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../react-context/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-context/src/PageContent.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-context/src/contexts/LanguageContext.js" beforeDir="false" />
@@ -122,8 +120,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/PersonalInformationForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="180" column="364" selection-start-line="180" selection-start-column="364" selection-end-line="180" selection-end-column="364" />
+            <state relative-caret-position="305">
+              <caret line="185" column="31" lean-forward="true" selection-start-line="185" selection-start-column="31" selection-end-line="185" selection-end-column="31" />
               <folding>
                 <element signature="e#0#61#0" expanded="true" />
               </folding>
@@ -278,7 +276,7 @@
       <workItem from="1596042210599" duration="109000" />
       <workItem from="1596042935114" duration="731000" />
       <workItem from="1596049029317" duration="94559000" />
-      <workItem from="1599230871838" duration="1531000" />
+      <workItem from="1599230871838" duration="2380000" />
     </task>
     <task id="LOCAL-00001" summary="- UI fixes for the insurdinary app.&#10;- fixed issues related to state management.">
       <created>1598881434481</created>
@@ -305,7 +303,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153320000" />
+    <option name="totallyTimeSpent" value="154169000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -318,15 +316,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.329927" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.329927" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -417,8 +414,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/PersonalInformationForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="180" column="364" selection-start-line="180" selection-start-column="364" selection-end-line="180" selection-end-column="364" />
+        <state relative-caret-position="305">
+          <caret line="185" column="31" lean-forward="true" selection-start-line="185" selection-start-column="31" selection-end-line="185" selection-end-column="31" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>
